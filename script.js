@@ -37,15 +37,18 @@ let audioStopped = false;
           }
           let video = document.createElement("video");
           video.src = "0206(1).mp4";
+          video.id = "vidosik";
           video.controls = false;
           video.autoplay = true;
-          video.style.width = "150px";
+          video.style.width = "130px";
           video.loop = true;
           img.replaceWith(video);
-          let label = document.getElementById("label");
-          label.style.visibility = "visible";
+          let p = document.getElementById("label");
+          p.style.visibility = "visible";
           let imaga = document.getElementById("imaga");
           imaga.style.visibility = "visible";
+          let label = document.getElementById("nazmi");
+          label.style.visibility = "hidden";
         }
     });
 });
