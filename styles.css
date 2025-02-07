@@ -9,8 +9,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
 }
 
@@ -40,24 +40,30 @@ body {
 }
 .congratulation {
     position: fixed;
-    top: 50%;
+    top: 48%;
     left: 53%;
     transform: translate(-50%, -50%);  
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 .nadpis{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
     color: rgb(173, 19, 19);
-    font-weight: 500;
-    font-size: 40px;
+    font-weight: 400;
+    font-size: 40px; 
     background-color: #ffcacd;
     text-align: center;
 }
 .foto{
     margin-top: 150px;
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .foto img{
     width: 200px;
@@ -68,16 +74,17 @@ body {
 .fuu{
    float: left; 
    position:fixed;
-    top: 27%;
-    left: 20%;
+    top: 14%;
+    left: -20%;
     transform: translate(-50%, -50%);  
     z-index: 1;
 }
 .dotacring{
     float: right;
     position:fixed;
-    top: 43%;
-    left: 74%;
+    width: 40%;
+    top: 40%;
+    left: 106%;
     transform: translate(-50%, -50%);  
     z-index: 1;
 }
@@ -85,7 +92,7 @@ body {
     font-size: 20px;
     position: fixed;
     bottom: 0%;
-    left: 53%;
+    left: 53%; 
     transform: translate(-50%, -50%);
     visibility: hidden;
 }
@@ -93,6 +100,7 @@ body {
     position: fixed;
     top: 50%;
     left: 53%;
+    width: 370px;
     transform: translate(-50%, -50%);  
     z-index: 0;
     display: flex;
@@ -100,4 +108,85 @@ body {
     align-items: center;
     visibility: hidden;
     margin-top: 157px;
+}
+#nazmi{
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(252, 176, 61);
+    font-size:16px;
+    visibility: visible;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+#vidosik{
+    top:70%;
+    position: fixed;
+}
+/* Для экранов меньше 768px */
+@media (max-width: 768px) {
+    .nadpis {
+        font-size: 20px; /* Уменьшаем размер шрифта */
+    }
+
+    .foto img {
+        max-width: 80%; /* Уменьшаем ширину изображения */
+        height: auto;
+    }
+
+    .fuu, .dotacring {
+        width: 30%; /* Уменьшаем размеры этих элементов */
+    }
+
+    .fuu {
+        left: 10%;
+    }
+
+    .dotacring {
+        left: 70%;
+    }
+
+    #imaga {
+        max-width: 250px; /* Уменьшаем размеры изображения */
+    }
+
+    /* Уменьшаем надписи и другие блоки, чтобы они подстраивались */
+    #nazmi {
+        font-size: 16px;
+    }
+
+    #label {
+        font-size: 16px;
+    }
+}
+
+/* Для экранов меньше 480px */
+@media (max-width: 480px) {
+    .nadpis {
+        font-size: 15px; /* Еще больше уменьшаем размер шрифта */
+    }
+
+    .foto img {
+        max-width: 70%; /* Еще больше уменьшаем изображения */
+        height: auto;
+    }
+
+    .fuu, .dotacring {
+        width: 40%; /* Уменьшаем элементы */
+    }
+
+    #imaga {
+        max-width: 220px; /* Уменьшаем изображения */
+    }
+
+    #nazmi {
+        font-size: 14px;
+    }
+
+    #label {
+        font-size: 14px;
+    }
 }
